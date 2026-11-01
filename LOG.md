@@ -41,8 +41,15 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 - **What it produced:** This repository with `README.md` (what, who for, ownership, how collisions are avoided), `CLAUDE.md` (the plan for agents, including no Claude co-author line in commits) and this log, plus an "in progress" Artifact 4 card on my portfolio.
 - **What I changed and why:** The README says plainly that I am the only team member so far and that the professor's answer is pending, so it does not claim anything that has not happened.
 
+### Step 5: Fork the project and read the code
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code
+- **Prompt:** "Yes, set it up" (fork `pesu-dev/discord_bot`, read the `mod` cog, and tell me how hard `/mod cleanup` is and what setup I need on my Mac).
+- **What it produced:** My fork `IbrahimCart/discord_bot`, cloned to `~/IdeaProjects/discord_bot` on the `dev` branch. It read the project's `AGENTS.md`, `CONTRIBUTING.md`, the `mod` cog and the tests. The issue is rated "Low": one new command in `src/cogs/mod/commands.py`, modelled on the existing `/mod purge`, with the two message texts kept as constants, and unit tests in `tests/unit/cogs/mod/commands_test.py`. No code has been written yet, and no other open pull request touches this issue.
+- **What I changed and why:** I learned the project needs Python 3.13 or newer, `uv`, and a unit-test coverage of at least 95% in CI. My Mac has none of `uv`, Docker or MongoDB. The unit tests mock Discord, so I only need `uv` to build and test the command. Running the real bot needs MongoDB, a bot token and a test server, so I will treat that as optional. *Maintainer reply on issue #92: none yet.*
+
 ## Next
 
-- Fork `pesu-dev/discord_bot`, run `.githooks/install.sh`, set up a test Discord server, a bot token and a MongoDB instance (Linux or WSL).
+- Install `uv`, run `.githooks/install.sh` and `uv sync --extra dev` in my fork, and check the existing tests pass.
 - Read the `mod` cog, then build `/mod cleanup` with tests.
 - Open the PR to `dev`, record the maintainers' replies here, and update the portfolio card with the PR link and a reflection.
