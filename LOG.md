@@ -55,6 +55,14 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 - **What it produced:** `uv` installed with Homebrew, then the project's pinned `uv` 0.11.x installed as a tool because the project refuses other versions. The existing suite passed before any change (393 unit tests, 99.6% coverage). It then wrote `/mod cleanup` in `src/cogs/mod/commands.py`, modelled on `/mod purge`: it only accepts `#access-help`, purges the channel, posts and pins the two onboarding messages, deletes Discord's "pinned a message" notices and sends an audit embed to the mod-logs channel. The two message texts are constants in `src/cogs/mod/helpers.py` (the second is 1783 characters, under Discord's 2000 limit), and the command is listed in the `/help` mod menu. Five new unit tests cover a wrong channel, a user without a moderator role, the purge/post/pin/audit flow, the message length and the notice cleanup.
 - **What I changed and why:** The linter flagged one line over the project's 120-character limit, which was fixed. I checked that the "no moderator role" test really tests the role check by running the same call as a moderator and seeing the purge run. After the change, lint, format, compile, the cog import check and the full unit suite all pass (398 tests, 99.6% coverage). I have **not** run the command in a real Discord server, which needs MongoDB, a bot token and a test server, so the tests use mocks. Nothing is committed in my fork yet: the project's `AGENTS.md` says not to commit until asked, and the branch name must use my Discord username.
 
+### Step 7: Open the pull request (the handover)
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code (Claude Opus 5.5 / Sonnet 5.5)
+- **Prompt:** "yes" (push the branch and open the PR), after I chose `llokri` for the branch prefix and my GitHub noreply address for the commit.
+- **What it produced:** Branch `llokri/mod-cleanup` pushed to my fork, and [pull request #103](https://github.com/pesu-dev/discord_bot/pull/103) opened against `pesu-dev/discord_bot`'s `dev` branch with the project's PR template: 5 files, +199 -2, one commit (`feat(mod): add /mod cleanup command to reset #access-help`, closes #92). GitHub reports it as mergeable. No CI checks had started yet.
+- **What I changed and why:** I changed the commit's author email to my GitHub noreply address before pushing so my school email would not be public on someone else's repository. In the PR template I only ticked what I actually did (unit tests, lint, format) and wrote plainly that I have not tested the command in a live Discord server and that my local tests ran on Python 3.15, not the project's 3.13. *Maintainer reply: none yet. Professor's reply about working alone: pending.*
+
 ## Next
 
-- Open the PR to `dev`, record the maintainers' replies here, and update the portfolio card with the PR link and a reflection.
+- Watch PR #103 for CI results and maintainer feedback, and record any replies and the changes I make because of them here.
+- Add a reflection and the final PR status to my portfolio card before Nov 8.

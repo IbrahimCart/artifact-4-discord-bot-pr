@@ -31,12 +31,13 @@ I use Claude Code for reading the unfamiliar codebase, drafting the command and 
 
 ## Definition of done
 
-1. A pull request to `pesu-dev/discord_bot` (`dev` branch) that implements `/mod cleanup` as described in issue #92, using their PR template.
+1. A pull request to `pesu-dev/discord_bot` (`dev` branch) that implements `/mod cleanup` as described in issue #92, using their PR template. **Done: PR #103.**
 2. The command tested on a test Discord server, with a screenshot of it working.
 3. This repository's `LOG.md` is up to date, and my portfolio card has the PR link and a short reflection.
 
 ## Links
 
 - Issue: https://github.com/pesu-dev/discord_bot/issues/92
-- Pull request: *not opened yet*
+- Pull request: https://github.com/pesu-dev/discord_bot/pull/103 (opened 2026-11-01, branch `llokri/mod-cleanup` into `dev`)
+- My fork: https://github.com/IbrahimCart/discord_bot
 - Portfolio: https://ibrahimcart.github.io
