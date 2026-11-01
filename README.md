@@ -27,12 +27,12 @@ This repository holds the **plan, the team notes and the log** for my Artifact 4
 
 ## How the AI is used
 
-I use Claude Code for reading the unfamiliar codebase, drafting the command and its tests, and keeping `LOG.md`. The agent follows [`CLAUDE.md`](CLAUDE.md). I run the project's own checks and test the command on my own Discord server before opening the pull request, because the project is only supported on Linux (or WSL) and needs a database and a bot token.
+I use Claude Code for reading the unfamiliar codebase, drafting the command and its tests, and keeping `LOG.md`. The agent follows [`CLAUDE.md`](CLAUDE.md). I run the project's own checks (lint, format and the unit tests with their 95% coverage gate) before opening the pull request. I have not run the command in a live Discord server, because the project is only supported on Linux (or WSL) and needs a database, a bot token and a test server that I have not set up.
 
 ## Definition of done
 
 1. A pull request to `pesu-dev/discord_bot` (`dev` branch) that implements `/mod cleanup` as described in issue #92, using their PR template. **Done: PR #103.**
-2. The command tested on a test Discord server, with a screenshot of it working.
+2. *Not done:* the command tested on a test Discord server, with a screenshot of it working. Unit tests and lint pass; a live test is optional and would need MongoDB, a bot token and a test server.
 3. This repository's `LOG.md` is up to date, and my portfolio card has the PR link and a short reflection.
 
 ## Links
