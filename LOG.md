@@ -62,7 +62,14 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 - **What it produced:** Branch `llokri/mod-cleanup` pushed to my fork, and [pull request #103](https://github.com/pesu-dev/discord_bot/pull/103) opened against `pesu-dev/discord_bot`'s `dev` branch with the project's PR template: 5 files, +199 -2, one commit (`feat(mod): add /mod cleanup command to reset #access-help`, closes #92). GitHub reports it as mergeable. No CI checks had started yet.
 - **What I changed and why:** I changed the commit's author email to my GitHub noreply address before pushing so my school email would not be public on someone else's repository. In the PR template I only ticked what I actually did (unit tests, lint, format) and wrote plainly that I have not tested the command in a live Discord server and that my local tests ran on Python 3.15, not the project's 3.13. *Maintainer reply: none yet. Professor's reply about working alone: pending.*
 
+### Step 8: The maintainers closed the pull request
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code
+- **Prompt:** "they responded"
+- **What it produced:** A check of the PR and the issue on GitHub. About 35 minutes after I opened it, a maintainer (`achyu-dev`) commented on both: *"were you even assigned the issue? are you part of PES university? Closing your PR as you were not even assigned"*, and closed PR #103. There was no review of the code itself, and nobody replied to my first comment on issue #92 before that.
+- **What I changed and why:** I had told myself a reply was not needed and opened the PR within an hour of asking, even though my comment said "within a few days". That was a mistake: I never waited to be assigned, which is what the maintainers expect. The project is also run by and for PES University students, which I am not, so it may not take outside contributions the way I assumed. I corrected my portfolio card and this README so they no longer say the handover is complete. Next step: decide whether to reply politely and ask to be assigned, or build the same kind of work for a different project or group. *Professor's reply about working alone: pending.*
+
 ## Next
 
-- Watch PR #103 for CI results and maintainer feedback, and record any replies and the changes I make because of them here.
-- Add a reflection and the final PR status to my portfolio card before Nov 8.
+- Decide with the maintainers (or a new project) how to get a handover that is accepted, and record it here.
+- Add a reflection and the final status to my portfolio card before Nov 8.
