@@ -69,6 +69,13 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 - **What it produced:** A check of the PR and the issue on GitHub. About 35 minutes after I opened it, a maintainer (`achyu-dev`) commented on both: *"were you even assigned the issue? are you part of PES university? Closing your PR as you were not even assigned"*, and closed PR #103. There was no review of the code itself, and nobody replied to my first comment on issue #92 before that.
 - **What I changed and why:** I had told myself a reply was not needed and opened the PR within an hour of asking, even though my comment said "within a few days". That was a mistake: I never waited to be assigned, which is what the maintainers expect. The project is also run by and for PES University students, which I am not, so it may not take outside contributions the way I assumed. I corrected my portfolio card and this README so they no longer say the handover is complete. Next step: decide whether to reply politely and ask to be assigned, or build the same kind of work for a different project or group. *Professor's reply about working alone: pending.*
 
+### Step 9: Reply to the maintainers
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code with the in-app browser
+- **Prompt:** "lets do optio 3" (reply to the maintainers and look for a second project at the same time), then "im signed into your browser still".
+- **What it produced:** A polite comment on PR #103: I am not part of PES University but a University of Washington student doing a class project, I should have waited for an answer on #92 before opening the PR, and I would be glad to be assigned and reopen it, or I understand if the issue is meant for their own community. Posting it with the command line was blocked, so it was posted through the browser after I approved the exact text. It is the second comment on the PR.
+- **What I changed and why:** The first typing attempt went nowhere because the page had not finished loading, so I checked the box's contents against the approved text before submitting. *Maintainer reply: none yet.* In parallel I am looking for a second target, a Discord server or group I belong to, to hand the same command to.
+
 ## Next
 
 - Decide with the maintainers (or a new project) how to get a handover that is accepted, and record it here.
