@@ -48,8 +48,13 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 - **What it produced:** My fork `IbrahimCart/discord_bot`, cloned to `~/IdeaProjects/discord_bot` on the `dev` branch. It read the project's `AGENTS.md`, `CONTRIBUTING.md`, the `mod` cog and the tests. The issue is rated "Low": one new command in `src/cogs/mod/commands.py`, modelled on the existing `/mod purge`, with the two message texts kept as constants, and unit tests in `tests/unit/cogs/mod/commands_test.py`. No code has been written yet, and no other open pull request touches this issue.
 - **What I changed and why:** I learned the project needs Python 3.13 or newer, `uv`, and a unit-test coverage of at least 95% in CI. My Mac has none of `uv`, Docker or MongoDB. The unit tests mock Discord, so I only need `uv` to build and test the command. Running the real bot needs MongoDB, a bot token and a test server, so I will treat that as optional. *Maintainer reply on issue #92: none yet.*
 
+### Step 6: Install uv and build `/mod cleanup`
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code (Claude Opus 5.5 / Sonnet 5.5)
+- **Prompt:** "Yes, install uv" (install `uv`, run the existing tests, then build the command).
+- **What it produced:** `uv` installed with Homebrew, then the project's pinned `uv` 0.11.x installed as a tool because the project refuses other versions. The existing suite passed before any change (393 unit tests, 99.6% coverage). It then wrote `/mod cleanup` in `src/cogs/mod/commands.py`, modelled on `/mod purge`: it only accepts `#access-help`, purges the channel, posts and pins the two onboarding messages, deletes Discord's "pinned a message" notices and sends an audit embed to the mod-logs channel. The two message texts are constants in `src/cogs/mod/helpers.py` (the second is 1783 characters, under Discord's 2000 limit), and the command is listed in the `/help` mod menu. Five new unit tests cover a wrong channel, a user without a moderator role, the purge/post/pin/audit flow, the message length and the notice cleanup.
+- **What I changed and why:** The linter flagged one line over the project's 120-character limit, which was fixed. I checked that the "no moderator role" test really tests the role check by running the same call as a moderator and seeing the purge run. After the change, lint, format, compile, the cog import check and the full unit suite all pass (398 tests, 99.6% coverage). I have **not** run the command in a real Discord server, which needs MongoDB, a bot token and a test server, so the tests use mocks. Nothing is committed in my fork yet: the project's `AGENTS.md` says not to commit until asked, and the branch name must use my Discord username.
+
 ## Next
 
-- Install `uv`, run `.githooks/install.sh` and `uv sync --extra dev` in my fork, and check the existing tests pass.
-- Read the `mod` cog, then build `/mod cleanup` with tests.
 - Open the PR to `dev`, record the maintainers' replies here, and update the portfolio card with the PR link and a reflection.
