@@ -1,5 +1,7 @@
 # Artifact 4: `/mod cleanup` for the PESU Discord Bot
 
+> **Update, 2026-11-01:** this was my first attempt. The maintainers closed the pull request, so Artifact 4 is now **[Doses](https://github.com/IbrahimCart/dose-reminder)**, a reminder app for my mom. This repository stays as the record of the first attempt.
+
 TCSS 490 (Generative AI and Software Development, UW Autumn 2026), Artifact 4: *For Someone Else*, by Ibrahim Cartan.
 
 This repository holds the **plan, the team notes and the log** for my Artifact 4 work. The code itself is a pull request to someone else's project, so it lives in my fork of that project and in the pull request linked below.

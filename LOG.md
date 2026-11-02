@@ -80,3 +80,10 @@ A running log of what I planned and what changed for TCSS 490 Artifact 4, and th
 
 - Decide with the maintainers (or a new project) how to get a handover that is accepted, and record it here.
 - Add a reflection and the final status to my portfolio card before Nov 8.
+
+### Step 10: Switched Artifact 4 to another project
+- **Date:** 2026-11-01
+- **Tool / model:** Claude Code
+- **Prompt:** "for artifact 4, i want to make a medication tracker for my mom..."
+- **What it produced:** A new repository, [`IbrahimCart/dose-reminder`](https://github.com/IbrahimCart/dose-reminder), with its own plan, CLAUDE.md and log.
+- **What I changed and why:** Waiting for the maintainers could have taken longer than the deadline, and I wanted a person I could ask and watch. I kept this repository as the record of the first attempt and what I learned from it: wait to be assigned before opening a pull request. *Maintainer reply on PR #103: none yet.*
